@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>{{post.name}} - DELETE</h1>
+
+<p>{{post.deadline}}</p>
+<p>{{post.description}}</p>
+<p>{{post.url}}</p>
+
+<h2>ARE YOU SURE YOU WANT TO DELETE?</h2>
+
+<div class="content-section">
+    <form method="POST" action="" name="form">
+        <input type="submit"/>
+        {{ form.hidden_tag() }}
+    </form>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Account Edit</h1>
+
+<h4>Current User Information:</h4>
+<p>{{current_user.name}}</p>
+<p>{{current_user.email}}</p>
+<p>{{current_user.dob}}</p>
+<p>{{current_user.phone}}</p>
+<p>{{current_user.belt}}</p>
+
+<h4>Change Personal Information:</h4>
+<div class="content-section">
+    <form method="POST" action="" name="form">
+        <label for="name">Name</label><br>
+        <input type="text" name="name"/><br>
+
+        <label for="email">Email</label><br>
+        <input type="text" name="email"/><br>
+
+        <label for="dob">Date of Birth (yyyy-mm-dd)</label><br>
+        <input type="text" name="dob"/><br>
+
+        <label for="phone">Phone</label><br>
+        <input type="text" name="phone"/><br>
+
+        <label for="belt">Belt</label><br>
+        <input type="text" name="belt"/><br>
+        <input type="submit"/>
+        {{ form.hidden_tag() }}
+    </form>
+</div>
+{% endblock content %}

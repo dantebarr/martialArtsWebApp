@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>{{post.name}}</h1>
+
+<p>{{post.deadline}}</p>
+<p>{{post.description}}</p>
+<p>{{post.url}}</p>
+
+<p>Total Videos: {{vid_total.c}}</p>
+
+<div style="position:absolute; left:+900px; top:30px;">
+    <div class="col-md-12">
+        <div class="content-section">
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-light"><a class="ml-2" href="/activity/{{course_id}}/{{post.name}}/edit">Edit</a></li>
+                <li class="list-group-item list-group-item-light"><a class="ml-2" href="/activity/{{course_id}}/{{post.name}}/delete">Delete</a></li>
+            </ul>
+        
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>{{post.name}} - EDIT</h1>
+
+<p>{{post.deadline}}</p>
+<p>{{post.description}}</p>
+<p>{{post.url}}</p>
+
+<div class="content-section">
+    <form method="POST" action="" name="form">
+        <label for="name">New Activity Name</label><br>
+        <input type="text" name="name"/><br>
+
+        <label for="deadline">Deadline (yyyy-mm-dd)</label><br>
+        <input type="text" name="deadline"/><br>
+
+        <label for="description">Description</label><br>
+        <input type="text" name="description"/><br>
+        <label for="description">URL</label><br>
+        <input type="text" name="url"/><br>
+        <input type="submit"/>
+        {{ form.hidden_tag() }}
+    </form>
+</div>
+
+{% endblock content %}

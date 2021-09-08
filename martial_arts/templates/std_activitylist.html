@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+{% for post in posts %}
+<article class="media content-section">
+    <div class="media-body">
+        <h2><a class="article-title" href="{{ url_for('std_activity') }}">{{ post.ActivityName }}</a></h2>
+        <div class="article-metadata">
+            <small class="text-muted"><b>Class: </b>{{ post.ClassName }}</small>
+            <small class="text-muted"><b>    Deadline: </b>{{post.deadline }}</small>
+        </div>
+        <p class="article-content">{{ post.description }}</p>
+    </div>
+</article>
+{% endfor %}
+{% endblock content %}

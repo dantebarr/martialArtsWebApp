@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Create New Class</h1>
+
+<div class="content-section">
+    <form method="POST" action="" name="form">
+        <!-- <input type="number" ID="classid" required/>
+        <input type="text" name="classname" required/>
+        <input type="number" age_group="agegroup" required/>
+        <input type="submit"/> -->
+        {{ form.hidden_tag() }}
+        <fieldset class="form-group">
+            <!-- <legend class="border-bottom mb-4">Log In</legend> -->
+            <div class="form-group">
+                {{ form.classname.label(class="form-control-label") }}
+                {{ form.classname(class="form-control form-control-lg") }}
+            </div>
+            <div class="form-group">
+                {{ form.agegroup.label(class="form-control-label") }}
+                {{ form.agegroup(class="form-control form-control-lg") }}
+            </div>
+            <div class="form-group">
+                {{ form.skilllevel.label(class="form-control-label") }}
+                {{ form.skilllevel(class="form-control form-control-lg") }}
+            </div>
+            <div class="form-group">
+                {{ form.time.label(class="form-control-label") }}
+                {{ form.time(class="form-control form-control-lg") }}
+            </div>
+        </fieldset>
+        <div class="form-group">
+            {{ form.submit(class="btn btn-outline-info") }}
+        </div>
+    </form>
+</div>
+
+{% endblock content %}
